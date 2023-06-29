@@ -1,3 +1,85 @@
-body {
-    background-color: bisque;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.refresh {
+  border: 1px solid black;
+  margin: 2%;
+  padding: 2%;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 375px) {
+  h1 {
+    font-size: 1.6rem;
+    padding: 21px 4.9%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding: 21px 4.9%;
+  }
+
+  .main-div {
+    width: 90%;
+    margin: 0 5%;
+    justify-content: space-around;
+  }
+
+  .latest-score {
+    width: 50%;
+  }
+
+  .latest-score-title {
+    justify-content: space-between;
+  }
+
+  .latest-score-title h2 {
+    margin-right: 10px;
+  }
+
+  .competition {
+    border: 2px solid #000;
+    margin-top: 12px;
+  }
+
+  .competition li {
+    padding: 2px 3%;
+    border-bottom: 1px solid #000;
+  }
+
+  .competition li:nth-child(even) {
+    background-color: #a9a9a9;
+  }
+
+  .add-scores {
+    width: 30%;
+  }
+
+  .scores-form {
+    gap: 6px;
+  }
+
+  .scores-form button {
+    width: 50%;
+    margin-left: 50%;
+  }
 }
