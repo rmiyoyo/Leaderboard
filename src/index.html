@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <script src="https://kit.fontawesome.com/4a3fcfc5e4.js" crossorigin="anonymous"></script>
+    <title>Leaderboard</title>
 </head>
-
 <body>
-    <h1>Hello webpack!</h1>
+    <h1>Leaderboard</h1>
+    <div class="main-div main-row">
+        <div class="latest-score main-column">
+            <div class="latest-score-title main-row">
+                <h2 id="recent-header">Recent Scores</h2>
+                <button class="refresh">Refresh</button>
+            </div>
+            <div class="competition">
+                <ul>
+                    <li><span>First Name: </span><span> 100</span></li>
+                    <li><span>Second Name: </span><span> 20</span></li>
+                    <li><span>Third Name: </span><span> 50</span></li>
+                    <li><span>Fourth Name: </span><span> 78</span></li>
+                    <li><span>Fifth Name: </span><span> 125</span></li>
+                    <li><span>Sixth Name: </span><span> 77</span></li>
+                    <li><span>Seventh Name: </span><span> 42</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="add-scores">
+            <h2>Add Your Score</h2>
+            <form class="main-column scores-form" action="">
+                <label for="player-name"></label>
+                <input type="text" name="" id="player-name" placeholder="Your Name">
+                <label for="player-score"></label>
+                <input type="number" name="" id="player-score" placeholder="Your Score">
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
-
 </html>
