@@ -1,7 +1,37 @@
 * {
+  font-family: 'Lato', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #f0fff0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #008080;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h1::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #008080;
+}
+
+.main-div {
+  background-color: #e0ffff;
+  border: 2px solid #789;
+  box-shadow: 0 0 5px 5px #708090;
+  padding: 2%;
 }
 
 ul {
@@ -16,15 +46,24 @@ ul {
 .main-column {
   display: flex;
   flex-direction: column;
+  border-right: 10%;
 }
 
 .refresh {
-  border: 1px solid black;
-  margin: 2%;
-  padding: 2%;
-  outline: none;
-  background: none;
+  font-size: large;
+  align-self: flex-end;
+  background-color: #008080;
+  color: #fff;
   cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.refresh:hover {
+  background-color: #00ced1;
 }
 
 @media only screen and (min-width: 375px) {
@@ -57,29 +96,72 @@ ul {
   }
 
   .competition {
-    border: 2px solid #000;
+    border: 2px solid #789;
     margin-top: 12px;
   }
 
   .competition li {
-    padding: 2px 3%;
-    border-bottom: 1px solid #000;
+    padding: 10px 3%;
   }
 
   .competition li:nth-child(even) {
-    background-color: #a9a9a9;
+    background-color: #afeeee;
   }
 
   .add-scores {
     width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .add-scores h2 {
+    text-align: left;
+    margin-bottom: 10px;
   }
 
   .scores-form {
+    margin-top: 1px;
+    display: flex;
+    flex-direction: column;
     gap: 6px;
   }
 
-  .scores-form button {
-    width: 50%;
-    margin-left: 50%;
+  .scores-form label {
+    font-weight: bold;
+  }
+
+  .scores-form input[type="text"],
+  .scores-form input[type="number"],
+  .scores-form .submit {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #player-name {
+    height: 35px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .scores-form .submit {
+    font-size: large;
+    align-self: flex-end;
+    background-color: #008080;
+    color: #fff;
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 0;
+  }
+
+  .scores-form .submit:hover {
+    background-color: #00ced1;
   }
 }
